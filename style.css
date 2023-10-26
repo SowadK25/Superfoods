@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .home {
+    background-color: rgb(241, 250, 238);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em 0em;
+    background: rgb(241, 250, 238);
+  }
+
+  nav img {
+    max-width: 9em;
+    height: auto;
+    width: 100%;
+    
+  }
+
+  nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.8em;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    align-items: center;
+
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    padding: 0.2em 2em;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.10em;
+    color: black;
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+
+  .nav-links li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(61,153,112);
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+    font-weight: bolder;
+  }
+
+  .nav-links li a:hover {
+    color:rgb(61,153,112);
+  }
+  
+  .nav-links li a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .block {
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .shape-md {
+    border-radius: 38% 62% 70% 30% / 52% 38% 62% 48%;
+    background-color: #d6f48d;
+    width: 12em;
+    height: 12em;
+    opacity: 0.5;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+  }
+
+  .shape-lg {
+    border-radius: 63% 37% 39% 61% / 52% 54% 46% 48%;
+    background-color: #d6f48d;
+    width: 20em;
+    height: 20em;
+    opacity: 0.5;
+    position: absolute;
+    top: 42%;
+    left: 15%;
+  }
+
+  .shape-sm {
+    border-radius: 31% 69% 39% 61% / 58% 28% 72% 42%;
+    background-color: #d6f48d;
+    width: 7em;
+    height: 7em;
+    opacity: 0.5;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+  }
+
+  .shape-xl {
+    border-radius: 35% 65% 64% 36% / 60% 39% 61% 40%;
+    background-color: #d6f48d;
+    width: 28em;
+    height: 28em;
+    opacity: 0.5;
+    position: absolute;
+    top: 60%;
+    left: 73%;
+  }
+
+  .foods {
+    background-color: whitesmoke;
+  }
+
+  .food-img {
+    height: 20em;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .vid iframe{
+    padding-top: 1.5em;
+  }
+
+  @media screen and (max-width: 1660px) {
+    .shape-md {
+      width:0;
+      height: 0;
+    }
+  
+    .shape-lg {
+      width: 0;
+      height: 0;
+    }
+  
+    .shape-sm {
+      width: 0;
+      height: 0;
+    }
+  
+    .shape-xl {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    .nav-links li a:after {
+      background: floralwhite;
+    }
+  
+    .nav-links {
+      position: fixed;
+      background: rgb(61,153,112);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0;
+      flex-direction: column;
+      justify-content: space-evenly;
+      clip-path: circle(100px at 90% -25%);
+      -webkit-clip-path: circle(100px at 90% -25%);
+      transition: all 1s ease-out;
+      opacity: 0.8;
+      z-index: 10;
+    }
+  
+    .line {
+      width: 30px;
+      height: 3px;
+      background: rgb(150,91,38);
+      margin: 4px;
+    }
+  
+    .hamburger {
+      position: absolute;
+      cursor: pointer;
+      right: 2%;
+      top: 45%;
+      transform: translate(-2%, -40%);
+      z-index: 11;
+      transition: all 0.8s ease;
+    }
+  
+    .hamburger.open {
+      transform: rotate(180deg);
+    }
+  
+    .nav-links.open {
+      clip-path: circle(1300px at 90% -25%);
+      -webkit-clip-path: circle(1300px at 90% -25%);
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    nav img {
+      max-width: 7em;
+    }
+
+    nav {
+      justify-content: center;
+    }
+  }
