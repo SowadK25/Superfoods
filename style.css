@@ -156,6 +156,8 @@ html {
 
   .vid iframe{
     padding-top: 1.5em;
+    width: 60%;
+    height: 700px;
   }
 
   @media screen and (max-width: 1660px) {
@@ -236,5 +238,10 @@ html {
 
     nav {
       justify-content: center;
+    }
+
+    .vid iframe{
+      width: 70%;
+      height: 300px;
     }
   }
